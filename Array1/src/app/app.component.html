@@ -1,0 +1,101 @@
+
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+<body>
+
+<div class="container">
+    <div [ngClass]="{'limitTextHeight': isReadMore}">
+  <h2>Basic Table</h2>
+  <p><b>Displaying the Basic Noraml Text And Below We Are Showing The TitleCase Words:</b></p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Data</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>hello</td>
+        
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>bird</td>
+        
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>table</td>
+        
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>football</td>
+        
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>pipe</td>
+        
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>code</td>
+        
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+</div>
+</body>
+
+</html>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" (click)="addNew()">
+  {{ isReadMore ? 'Click To Display TitleCase': 'Close The Data' }}
+</button>
+
+<!--                       TITLECASE FOREACHLOOP                              -->
+<div class="container">
+
+
+<h2 class="hello">TitleCase</h2>
+
+<hr>
+<ng-container *ngIf="visible">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Data</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider" >
+    <tr *ngFor="let mydata of data1">
+      <td>{{mydata.id}}</td>
+      <td>{{mydata.name}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+</ng-container>
+
+</div>

@@ -1,0 +1,21 @@
+p{
+    background-color: yellow;
+    
+}
+
+h2{
+    color: white;
+    background-color: black;
+}
+
+button{
+    width: 200px;
+    padding: 10px;
+    
+}
+
+
+
+.table{
+    justify-content: center;
+}
